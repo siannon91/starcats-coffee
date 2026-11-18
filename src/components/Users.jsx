@@ -12,6 +12,10 @@ function Users() {
     const [newUsername, setNewUsername] = useState('')
     const [newEmail, setNewEmail] = useState('')
 
+    function handleAdd() {
+        setUsers([...users, { username: newUsername, email: newEmail }])
+    }
+
     return (
         <div>
             <h2>Brukere</h2>
@@ -37,6 +41,8 @@ function Users() {
                 value={newEmail}
                 onChange={(e) => setNewEmail(e.target.value)}
             />
+
+            <button onClick={handleAdd}>Meld på</button>
             
         </div>
     )
