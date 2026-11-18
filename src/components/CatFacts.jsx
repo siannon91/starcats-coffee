@@ -8,7 +8,14 @@ function CatFacts() {
     useEffect(() => {
         fetch('https://catfact.ninja/facts?limit=5')
             .then((response) => response.json())
-            .then((data) => console.log(data))
+            .then((data) => {
+                setFacts(data.data)
+                setLoading(false)
+            })
+        .catch(() => {
+            setError('Noe gikk galt. Prøv igjen senere.')
+            setLoading(false)
+        })
     }, [])
 
     return (
