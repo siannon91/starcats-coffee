@@ -9,10 +9,13 @@ const mockData = [
 
 function Users() {
     const [users, setUsers] = useState(mockData)
+    const [newUsername, setNewUsername] = useState('')
+    const [newEmail, setNewEmail] = useState('')
 
     return (
         <div>
             <h2>Brukere</h2>
+
             <ul>
                 {users.map((user) => (
                     <li key={user.email}>
@@ -20,6 +23,21 @@ function Users() {
                     </li>
                 ))}
             </ul>
+
+            <input
+                type="text"
+                placeholder="Brukernavn"
+                value={newUsername}
+                onChange={(e) => setNewUsername(e.target.value)}
+            />
+
+            <input
+                type="email"
+                placeholder="E-post"
+                value={newEmail}
+                onChange={(e) => setNewEmail(e.target.value)}
+            />
+            
         </div>
     )
 }
