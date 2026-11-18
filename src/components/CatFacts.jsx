@@ -18,9 +18,17 @@ function CatFacts() {
         })
     }, [])
 
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>{error}</p>
+
     return (
         <div>
             <h2>Kattenytt</h2>
+            <ul>
+                {facts.map((item) => (
+                    <li key={item.fact}>{item.fact}</li>
+                ))}
+            </ul>
         </div>
     )
 }
