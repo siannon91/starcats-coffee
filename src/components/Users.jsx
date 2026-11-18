@@ -13,7 +13,11 @@ function Users() {
     const [newEmail, setNewEmail] = useState('')
 
     function handleAdd() {
-        setUsers([...users, { username: newUsername, email: newEmail }])
+        if (newUsername === '' || newEmail === '') return
+        setUsers([...users, { username: newUsername, email: newEmail
+    }])
+        setNewUsername('')
+        setNewEmail('')
     }
 
     return (
