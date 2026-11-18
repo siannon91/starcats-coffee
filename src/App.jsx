@@ -2,6 +2,7 @@ import CookieClicker from './components/CookieClicker'
 import CatFacts from './components/CatFacts'
 import Users from './components/Users'
 import background from './assets/background.jpg'
+import './App.css'
 
 function App() {
   return (
