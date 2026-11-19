@@ -1,10 +1,98 @@
+body {
+  
+}
+
 .cafe {
   position: relative;
   width: min(100vw, calc(100vh * 16 / 9));
   margin: 0 auto;
+  container-type: inline-size;
 }
 
 .sfondo {
   display: block;
   width: 100%;
+}
+
+.tv {
+  position: absolute;
+  left: 33.5%;
+  top: 2.5%;
+  width: 33%;
+  height: 29%;
+  overflow: auto;
+  font-size: 1cqw;
+  border: 2px solid red;
+}
+
+.contatore {
+  position: absolute;
+  left: 6%;
+  top: 5.5%;
+  width: 13%;
+  height: 31%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  font-size: 1.2cqw;
+  border: 2px solid red;
+  color: #f4f1e8;
+}
+
+.contatore p {
+  margin: 0;
+}
+
+.contatore strong {
+  font-size: 4cqw;
+}
+
+.biscotto {
+  position: absolute;
+  left: 59%;
+  top: 76%;
+  width: 8%;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+.biscotto img {
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0 0 0.6cqw #ffd54f);
+}
+
+.lavagna-utenti {
+  position: absolute;
+  right: 2.5%;
+  top: 19.5%;
+  width: 28%;
+  height: 41.5%;
+  overflow: auto;
+  font-size: 1cqw;
+  border: 2px solid red;
+  color: #f4f1e8;
+}
+
+.utenti {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.elenco {
+  flex: 1;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.campi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4cqw;
 }

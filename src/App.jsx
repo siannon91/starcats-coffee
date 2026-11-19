@@ -7,12 +7,22 @@ import './App.css'
 function App() {
   return (
     <div>
+      
+
       <div className="cafe">
         <img className="sfondo" src={background} alt="StarCats Coffee" />
+        <div className="tv">
+          <CatFacts />
+        </div>
+        
+        <CookieClicker />
+                
+        <div className="lavagna-utenti">
+          <Users />
+        </div>
+
       </div>
-      <CookieClicker />
-      <CatFacts />
-      <Users />
+           
     </div>
   )
 }
