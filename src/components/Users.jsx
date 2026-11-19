@@ -11,13 +11,30 @@ function Users() {
     const [users, setUsers] = useState(mockData)
     const [newUsername, setNewUsername] = useState('')
     const [newEmail, setNewEmail] = useState('')
+    const [melding, setMelding] = useState('')
 
     function handleAdd() {
-        if (newUsername === '' || newEmail === '') return
-        setUsers([...users, { username: newUsername, email: newEmail
-    }])
+        const navn = newUsername.trim()
+        const epost = newEmail.trim()
+
+        if (navn === '' || epost === '') {
+            setMelding('Fyll ut både navn og e-post.')
+            return
+        }
+        if (!/^\S+@\S+\.\S+$/.test(epost)) {
+            setMelding('Skriv inn en gyldig e-postadresse.')
+            return
+        }
+        if (users.some((user) => user.email === epost)) {
+            setMelding('Denne e-posten er allerede påmeldt.')
+            return
+        }
+
+        setUsers([...users, { username: navn, email: epost }])
         setNewUsername('')
         setNewEmail('')
+        setMelding('')
+
     }
 
     return (
@@ -47,7 +64,8 @@ function Users() {
                     onChange={(e) => setNewEmail(e.target.value)}
                 />
 
-                <button className="partecipa" onClick={handleAdd}>Meld på</button>
+                <button className="partecipa" onClick={handleAdd}>Meld deg på!</button>
+                {melding && <p className="feilmelding">{melding}</p>}
             </div>
         </div>
     )

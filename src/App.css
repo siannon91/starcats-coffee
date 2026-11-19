@@ -8,6 +8,7 @@
   width: min(100vw, calc(100vh * 16 / 9));
   margin: 0 auto;
   container-type: inline-size;
+  border: 8px ridge #2a1102;
 }
 
 .sfondo {
@@ -208,4 +209,10 @@
   left: 43.5%;
   top: 35%;
   width: 14%;
+}
+
+.feilmelding {
+  margin: 0;
+  font-size: 1.1cqw;
+  color: #ffb4a2;
 }
