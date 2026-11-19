@@ -22,13 +22,15 @@ function CatFacts() {
     if (error) return <p>{error}</p>
 
     return (
-        <div>
-            <h2>Kattenytt</h2>
-            <ul>
-                {facts.map((item) => (
-                    <li key={item.fact}>{item.fact}</li>
-                ))}
-            </ul>
+        <div className="notizie">
+            <h2>Visste du at...?</h2>
+            <div className="finestra">
+                <ul className="fatti">
+                    {facts.map((item) => (
+                        <li key={item.fact}>- {item.fact} -</li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }

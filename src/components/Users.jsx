@@ -22,7 +22,7 @@ function Users() {
 
     return (
         <div className="utenti">
-            <h2>Brukere</h2>
+            <h2>Deltakere på KJEKSFESTEN :</h2>
 
             <ul className="elenco">
                 {users.map((user) => (
@@ -35,7 +35,7 @@ function Users() {
             <div className="campi">
                 <input
                     type="text"
-                    placeholder="Brukernavn"
+                    placeholder="Deltakernavn"
                     value={newUsername}
                     onChange={(e) => setNewUsername(e.target.value)}
                 />
@@ -47,7 +47,7 @@ function Users() {
                     onChange={(e) => setNewEmail(e.target.value)}
                 />
 
-                <button onClick={handleAdd}>Meld på</button>
+                <button className="partecipa" onClick={handleAdd}>Meld på</button>
             </div>
         </div>
     )
