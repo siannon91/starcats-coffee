@@ -1,16 +1,19 @@
-# React + Vite
+# StarCats Coffee
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Et lite React-prosjekt (React Oppgave 2) der tre øvelser henger sammen i en kattekafé.
 
-Currently, two official plugins are available:
+**Se siden her:** https://siannon91.github.io/starcats-coffee/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Hva er med
 
-## React Compiler
+- **Kjeksklikker:** Trykk på kjeksen for å få ett poeng per klikk. Poengene vises på tavlen til venstre, og katten bytter bilde for hvert klikk.
+- **Kattefakta:** Henter fem kattefakta fra et API og viser dem på TV-skjermen. Siden viser «Loading...» mens dataene hentes, og en feilmelding hvis noe går galt.
+- **Deltakere:** En liste over deltakere på tavlen til høyre. Man kan melde seg på med navn og e-post, og e-posten blir kontrollert før den legges til.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Teknologi og kilder
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React og Vite
+- `useState` og `useEffect`
+- Kattefakta fra [catfact.ninja](https://catfact.ninja)
+- Skrifttypen Pangolin fra Google Fonts
+- Publisert med GitHub Pages
