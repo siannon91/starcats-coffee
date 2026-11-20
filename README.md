@@ -4,6 +4,8 @@ Et lite React-prosjekt (React Oppgave 2) der tre øvelser henger sammen i en kat
 
 **Se siden her:** https://siannon91.github.io/starcats-coffee/
 
+![Skjermbilde av StarCats Coffee](bilder/skjermbilde.png)
+
 ## Hva er med
 
 - **Kjeksklikker:** Trykk på kjeksen for å få ett poeng per klikk. Poengene vises på tavlen til venstre, og katten bytter bilde for hvert klikk.
