@@ -26,8 +26,8 @@ function CatFacts() {
             <h2>Visste du at...?</h2>
             <div className="finestra">
                 <ul className="fatti">
-                    {facts.map((item) => (
-                        <li key={item.fact}>- {item.fact} -</li>
+                    {[...facts, ...facts].map((item, index) => (
+                        <li key={index}>- {item.fact} -</li>
                     ))}
                 </ul>
             </div>
